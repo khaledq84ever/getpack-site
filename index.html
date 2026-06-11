@@ -304,6 +304,24 @@
         background: var(--red-dark);
         transform: scale(1.02);
       }
+      .site-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        border: 1px solid var(--line);
+        color: var(--gold);
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 700;
+        padding: 11px;
+        border-radius: 13px;
+        transition: 0.25s;
+      }
+      .site-btn:hover {
+        background: var(--gold);
+        color: var(--navy);
+      }
       .add-btn svg {
         width: 19px;
         height: 19px;
@@ -710,6 +728,7 @@
       const EXTS = [
         {
           key: "youtube",
+          site: "https://youtube-mp3-downloader-production-c1e2.up.railway.app",
           zip: "youtube-extension.zip",
           name: "YTGet",
           accent: "#ff0033",
@@ -719,6 +738,7 @@
         },
         {
           key: "tweetget",
+          site: "https://tweetget-production.up.railway.app",
           zip: "tweetget-extension.zip",
           name: "TweetGet",
           accent: "#1d9bf0",
@@ -728,6 +748,7 @@
         },
         {
           key: "instagram",
+          site: "https://sunny-creation-production-05bc.up.railway.app",
           zip: "instagram-extension.zip",
           name: "InstaGet",
           accent: "#e1306c",
@@ -737,6 +758,7 @@
         },
         {
           key: "tiktok",
+          site: "https://ravishing-acceptance-production-f209.up.railway.app",
           zip: "tiktok-extension.zip",
           name: "TikGet",
           accent: "#25f4ee",
@@ -761,6 +783,9 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         ${lang === "ar" ? "أضِف إلى المتصفح" : "Add to Browser"}
       </button>
+      <a class="site-btn" href="${e.site}" target="_blank" rel="noopener">
+        ${lang === "ar" ? "🌐 استخدمه أونلاين بدون تثبيت" : "🌐 Use it online — no install"}
+      </a>
     </article>`,
         ).join("");
       }
