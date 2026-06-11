@@ -18,3 +18,7 @@ and **Use it online** (jumps to that extension's website — nothing to install)
 
 Deploy: `railway up --ci --service getpack` (files are copied from
 `~/www/extensions/`; rebuild zips there first after extension changes).
+
+## Maintenance
+- `./build.sh` — rebuild all 4 zips from `~/projects/*-extension`, sync this folder + `~/www/extensions/`, deploy.
+- `node test/load-test.js` — load every extension in headless Chromium (needs `npm i playwright` + `npx playwright install chromium`); fails on console errors.
