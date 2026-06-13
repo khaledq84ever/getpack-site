@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://getpack-production.up.railway.app/sitemap.xml
